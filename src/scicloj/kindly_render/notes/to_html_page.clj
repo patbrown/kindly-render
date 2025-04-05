@@ -16,6 +16,11 @@
   (-> (hiccups/with-hiccups notebook)
       (page)))
 
+(defn render-partial-notebook
+  "Given a notebook, renders and returns an HTML string page"
+  [notebook]
+  (-> (hiccups/with-hiccups notebook)))
+
 (defn render-note
   "Given a note, renders a notebook of just that note"
   ([note] (render-note note nil))
